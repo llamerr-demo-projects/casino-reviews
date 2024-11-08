@@ -7,7 +7,7 @@
     "dev": "concurrently \"vite\" \"npm run sass:watch\"",
     "sass": "node-sass public/casino-reviews.scss public/casino-reviews.css",
     "sass:watch": "node-sass public/casino-reviews.scss public/casino-reviews.css --watch",
-    "build": "tsc -b && vite build",
+    "build": "npm run sass && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
