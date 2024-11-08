@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Casino Reviews</title>
+  <link rel="stylesheet" href="casino-reviews.css">
+</head>
+<body>
+  <!-- CARD TEMPLATE -->
+  <template id="casino-review-template">
+    <div class="casino-card">
+      <div class="casino-logo">
+        <img src="" alt="">
+      </div>
+      <div class="details">
+        <div class="new-badge">NEW</div>
+        <h3></h3>
+        <div class="rating-info">
+          <div class="country"></div>
+          <div class="rating-value"></div>
+          <div class="rating"></div>
+        </div>
+      </div>
+      <div class="badges"></div>
+      <div class="visit-button">
+        <a href="">VISIT</a>
+      </div>
+    </div>
+  </template>
+
+  <!-- DIALOG -->
+  <div class="dialog-container hidden" id="dialog">
+    <div class="dialog">
+      <button class="button"></button>
+      <div class="title">20 Free Spins at 21 Dukes Casino</div>
+
+      <div class="code-copied hidden">
+        <img src="./images/check.svg" alt="Copied!">
+        Code copied to clipboard.
+      </div>
+      <div class="code">WELCOME</div>
+
+      <div class="info">
+          <span class="label">Games allowed:</span>
+          <span class="games value">Slots, Keno, Scratch Cards, Bingo</span>
+  
+          <span class="label">Max cache out:</span>
+          <span class="cache-out value">100$</span>
+  
+          <span class="label">Min. deposit:</span>
+          <span class="deposit value free-value">FREE</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ACTUAL DESIGN -->
+  <div class="container">
+    <h1>Online Casino Reviews</h1>
+    <div class="header">
+      <div class="filter">All Casinos</div>
+      <div class="amount">1,138 Casinos</div>
+    </div>
+    <div class="casino-list"></div>
+
+    <!-- LOADING SKELETON -->
+    <div class="loading-skeleton none">
+      <div class="loading-skeleton-item">
+        <div class="loading-skeleton-logo"></div>
+        <div class="loading-skeleton-details">
+          <div class="loading-skeleton-name"></div>
+          <div class="loading-skeleton-rating"></div>
+        </div>
+        <div class="loading-skeleton-badges"></div>
+        <div class="loading-skeleton-visit-button"></div>
+      </div>
+    </div>
+
+    <div class="load-more">
+      <button disabled>Load More Casinos (+5)</button>
+    </div>
+  </div>
+
+  <script type="module" src="casino-reviews.js"></script>
+</body>
+</html>

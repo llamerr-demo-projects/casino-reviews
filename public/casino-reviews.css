@@ -1,0 +1,368 @@
+@layer base, components, page, utilities;
+@layer utilities {
+  @keyframes pulse {
+    0% {
+      opacity: 0.5; }
+    50% {
+      opacity: 1; }
+    100% {
+      opacity: 0.5; } }
+  .loading-skeleton {
+    animation: pulse 1s infinite;
+    background-color: var(--color-15);
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 10px; }
+    .loading-skeleton-item {
+      align-items: center;
+      display: flex;
+      margin-bottom: 10px; }
+    .loading-skeleton-logo {
+      background-color: var(--color-15);
+      border-radius: 4px;
+      height: 50px;
+      margin-right: 15px;
+      width: 80px; }
+    .loading-skeleton-details {
+      flex: 1; }
+    .loading-skeleton-name {
+      background-color: var(--color-15);
+      border-radius: 4px;
+      height: 20px;
+      margin-bottom: 10px; }
+    .loading-skeleton-rating {
+      background-color: var(--color-15);
+      border-radius: 4px;
+      height: 15px;
+      margin-bottom: 10px; }
+    .loading-skeleton-badges {
+      background-color: var(--color-15);
+      border-radius: 4px;
+      height: 15px;
+      margin-bottom: 10px; }
+    .loading-skeleton-visit-button {
+      background-color: var(--color-15);
+      border-radius: 4px;
+      height: 30px; } }
+
+@layer components {
+  .dialog-container {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .dialog {
+    width: 272px;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-2) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 6px var(--color-3);
+    padding: 16px;
+    border-radius: 6px;
+    flex-direction: column; }
+    .dialog::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-style: solid; }
+    .arrow-top .dialog::before {
+      top: -10px;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent var(--color-2) transparent;
+      filter: drop-shadow(0 -2px 1px var(--color-3)); }
+    .arrow-bottom .dialog::before {
+      bottom: -10px;
+      border-width: 10px 10px 0 10px;
+      border-color: var(--color-2) transparent transparent transparent;
+      filter: drop-shadow(0 2px 1px var(--color-3)); }
+    .dialog .title {
+      font: normal normal bold 15px/20px Roboto;
+      color: var(--color-12);
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+    .dialog .code-copied {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      top: -11px;
+      left: 30px;
+      width: 220px;
+      background: var(--color-2) 0% 0% no-repeat padding-box;
+      box-shadow: 0px 1px 6px var(--color-3);
+      padding: 12px;
+      border-radius: 6px;
+      font: normal normal normal 13px/22px Roboto;
+      letter-spacing: 0px;
+      color: var(--color-5); }
+      .dialog .code-copied img {
+        margin-right: 5px; }
+      .dialog .code-copied::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        bottom: -10px;
+        border-width: 10px 10px 0 10px;
+        border-color: var(--color-2) transparent transparent transparent;
+        filter: drop-shadow(0 2px 1px var(--color-3)); }
+    .dialog .code {
+      border: 2px dashed var(--color-17);
+      border-radius: 4px;
+      font: normal normal bold 12px/20px Roboto;
+      color: var(--color-9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 8px;
+      margin: 15px 0 10px;
+      cursor: pointer; }
+    .dialog .info {
+      display: grid;
+      grid-template-columns: minmax(110px, 1fr) 1fr;
+      grid-template-rows: repeat(3, min-content);
+      gap: 10px; }
+    .dialog .label {
+      font: normal normal normal 14px/20px Roboto;
+      color: var(--color-5); }
+    .dialog .value {
+      font: normal normal normal 14px/20px Roboto;
+      color: var(--color-9); }
+    .dialog .free-value {
+      color: var(--color-11); }
+    .dialog .button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 18px;
+      height: 18px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 0; }
+      .dialog .button::before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        mask-repeat: no-repeat;
+        mask-position: center;
+        mask-size: contain;
+        mask-image: url("./images/close-x-svgrepo-com.svg");
+        background-color: var(--color-17); }
+  @media (max-width: 480px) {
+    .dialog {
+      width: calc(100vw - 32px);
+      height: calc(100vh - 32px);
+      top: 0;
+      left: 0;
+      position: fixed;
+      padding-top: 20%;
+      z-index: 10; }
+      .dialog .code-copied {
+        top: 45px;
+        left: calc(50% - 122px); } } }
+
+@layer components {
+  .casino-card {
+    display: grid;
+    grid-template-columns: subgrid;
+    gap: 15px;
+    padding: 15px 20px;
+    min-height: 64px;
+    background: var(--color-2) 0% 0% no-repeat padding-box;
+    box-shadow: 0px 1px 6px var(--color-3);
+    border-radius: 6px;
+    opacity: 1; }
+    .casino-card .casino-logo {
+      margin: auto; }
+      .casino-card .casino-logo img {
+        max-width: 100%;
+        height: auto; }
+    .casino-card:hover .casino-logo {
+      opacity: 0.8; }
+    .casino-card .details .new-badge {
+      border: 1px solid var(--color-10);
+      border-radius: 4px;
+      width: fit-content;
+      padding: 0 5px;
+      font: normal normal bold 11px/18px Roboto;
+      letter-spacing: 0px;
+      color: var(--color-11); }
+    .casino-card .details h3 {
+      display: inline-block;
+      margin: 5px 0;
+      color: var(--color-9);
+      font: normal normal normal 15px/18px Roboto;
+      letter-spacing: 0px;
+      color: var(--color-4); }
+      .casino-card .details h3:hover {
+        cursor: pointer;
+        color: var(--color-16); }
+    .casino-card .details .rating-info {
+      display: flex;
+      align-items: center; }
+      .casino-card .details .rating-info .country {
+        width: 21px;
+        height: 15px;
+        margin-right: 8px;
+        background: transparent url("./images/flag_us.png") 0% 0% no-repeat padding-box; }
+      .casino-card .details .rating-info .rating-value {
+        font: normal normal normal 12px/20px Roboto;
+        letter-spacing: 0px;
+        color: var(--color-5); }
+      .casino-card .details .rating-info .rating {
+        font-weight: bold;
+        color: var(--color-11);
+        display: flex; }
+        .casino-card .details .rating-info .rating > div {
+          width: 10px;
+          height: 10px;
+          margin-left: 5px;
+          background: transparent url("./images/star_rounded_off.svg") 0% 0% no-repeat padding-box; }
+          .casino-card .details .rating-info .rating > div.active {
+            background: transparent url("./images/star_rounded_on.svg") 0% 0% no-repeat padding-box; }
+    .casino-card .badges {
+      margin: auto 0;
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap; }
+      .casino-card .badges > div {
+        display: inline-block;
+        background: var(--color-8) 0% 0% no-repeat padding-box;
+        border-radius: 13px;
+        font: normal normal normal 13px/20px Roboto;
+        color: var(--color-9);
+        padding: 4px 20px; }
+        .casino-card .badges > div:hover {
+          cursor: pointer;
+          background: var(--color-15) 0% 0% no-repeat padding-box; }
+    @media (max-width: 480px) {
+      .casino-card .badges > div {
+        font-size: 11px;
+        line-height: 15px;
+        margin-bottom: 0; } }
+    .casino-card .visit-button {
+      margin: auto; }
+      .casino-card .visit-button a {
+        display: inline-block;
+        background-color: var(--color-4);
+        font: normal normal normal 11px/14px Roboto;
+        letter-spacing: 0.55px;
+        color: var(--color-2);
+        text-decoration: none;
+        padding: 8px 20px 7px;
+        border-radius: 4px;
+        transition: background-color 0.3s; }
+        .casino-card .visit-button a:hover {
+          cursor: pointer;
+          background-color: var(--color-16); }
+  .casino-list > .casino-card {
+    grid-template-columns: 70px 1fr 1fr min-content; }
+  @media (max-width: 480px) {
+    .casino-list > .casino-card {
+      grid-template-columns: 70px 1fr;
+      grid-template-rows: auto auto auto; }
+    .casino-card > div:nth-child(1) {
+      grid-column: 1 / 2; }
+    .casino-card > div:nth-child(2) {
+      grid-column: 2 / 3; }
+    .casino-card > div:nth-child(3) {
+      grid-column: 1 / -1; }
+    .casino-card > div:nth-child(4) {
+      grid-column: 1 / -1; } } }
+
+@layer utilities {
+  .hidden {
+    visibility: hidden !important; }
+  .none {
+    display: none !important; }
+  :disabled {
+    background-color: var(--color-7) !important;
+    border: 1px solid var(--color-7) !important;
+    cursor: wait !important; } }
+
+@layer base {
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: bold;
+    src: url("./fonts/Roboto-Bold.ttf") format("truetype"); }
+  @font-face {
+    font-family: 'Roboto';
+    font-weight: normal;
+    src: url("./fonts/Roboto-Regular.ttf") format("truetype"); }
+  @font-face {
+    font-family: 'Roboto Condensed';
+    font-weight: bold;
+    src: url("../fonts/RobotoCondensesd-Bold.ttf") format("truetype"); }
+  :root {
+    --color-1: #F9FAFA;
+    --color-2: #FFFFFF;
+    --color-3: #00000029;
+    --color-4: #429BF4;
+    --color-5: #8F8F8F;
+    --color-6: #FEB524;
+    --color-7: #E2E2E2;
+    --color-8: #F3F3F3;
+    --color-9: #5E6166;
+    --color-10: #0000001E;
+    --color-11: #68CB6C;
+    --color-12: #404040;
+    --color-13: #0F0F0F;
+    --color-14: #616161;
+    --color-15: #DAECFE;
+    --color-16: #3082D4;
+    --color-17: #878CA4; }
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-1); } }
+
+@layer page {
+  .container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 20px; }
+  h1 {
+    text-align: left;
+    font: normal normal bold 28px/32px Roboto;
+    color: var(--color-12);
+    margin-bottom: 20px; }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px; }
+    .header .filter {
+      font: normal normal bold 18px/24px Roboto;
+      color: var(--color-12); }
+    .header .amount {
+      font: normal normal normal 14px/20px Roboto;
+      color: var(--color-12); }
+  .casino-list {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 10px; }
+  .load-more {
+    text-align: center;
+    margin-top: 20px; }
+    .load-more button {
+      width: 100%;
+      background: var(--color-2) 0% 0% no-repeat padding-box;
+      border: 1px solid var(--color-4);
+      border-radius: 23px;
+      padding: 10px 20px;
+      font: normal normal normal 14px/18px Roboto;
+      color: var(--color-4);
+      cursor: pointer;
+      transition: background-color 0.3s; }
+      .load-more button:hover {
+        background-color: var(--color-4);
+        color: var(--color-2); }
+      .load-more button:disabled {
+        color: var(--color-2); } }

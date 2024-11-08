@@ -1,0 +1,61 @@
+[
+    {
+      "name": "Sports Interaction Casino Review",
+      "logo": "sports-interaction-logo.png",
+      "rating": 4.4,
+      "badges": [
+        {"title": "20 Free Spins", "code": "WELCOME"},
+        {"title": "200% First deposit bonus +250 FS", "code": "ACTIVATE"}
+      ],
+      "link": "#",
+      "isNew": true,
+      "country": "USA",
+      "minDeposit": 0,
+      "maxCashOut": 100,
+      "gamesAllowed": ["Slots", "Keno", "Scratch Cards", "Bingo"]
+    },
+    {
+      "name": "21 Dukes Casino Review",
+      "logo": "21-dukes-casino-logo.png",
+      "rating": 4.4,
+      "badges": [
+        {"title": "20 Free Spins", "code": "20FREE"},
+        {"title": "200% First deposit bonus +250 FS", "code": "BONUS200"}
+      ],
+      "link": "#",
+      "isNew": false,
+      "country": "USA",
+      "minDeposit": 50,
+      "maxCashOut": 220,
+      "gamesAllowed": ["Scratch Cards", "Bingo"]
+    },
+    {
+      "name": "AC Casino Review",
+      "logo": "ac-casino-logo.png",
+      "rating": 4.4,
+      "badges": [
+        {"title": "50 Free Spins", "code": "SPIN50"},
+        {"title": "200% First deposit bonus", "code": "DEPOSIT200"}
+      ],
+      "link": "#",
+      "isNew": true,
+      "country": "USA",
+      "minDeposit": 20,
+      "maxCashOut": 320,
+      "gamesAllowed": ["Slots", "Bingo"]
+    },
+    {
+      "name": "All Irish Casino Review",
+      "logo": "all-irish-casino-logo.png",
+      "rating": 4.4,
+      "badges": [
+        {"title": "100% First deposit bonus +70 FS", "code": "LUCKY100"}
+      ],
+      "link": "#",
+      "isNew": false,
+      "country": "USA",
+      "minDeposit": 80,
+      "maxCashOut": 420,
+      "gamesAllowed": ["Keno", "Scratch Cards"]
+    }
+]

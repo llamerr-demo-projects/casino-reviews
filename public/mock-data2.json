@@ -1,0 +1,80 @@
+[
+    {
+      "name": "All Star Games Casino Review",
+      "logo": "all-star-games-casino-logo.png",
+      "rating": 4.4,
+      "badges": [
+        {"title": "25 Free Spins", "code": "GAMES25"},
+        {"title": "200% First deposit bonus", "code": "DEPOSIT200"},
+        {"title": "Free Drinks", "code": "ALCOHOL 120%"},
+        {"title": "Free Cigars", "code": "PACHO HERRERA"},
+        {"title": "Free Hookers", "code": "GIRLS NIGHT"}
+      ],
+      "link": "#",
+      "isNew": false,
+      "country": "USA",
+      "minDeposit": 20,
+      "maxCashOut": 150,
+      "gamesAllowed": ["Slots", "Keno", "Shooting people", "Bingo"]
+    },
+    {
+      "name": "All Star Slots Casino Review",
+      "logo": "all-star-slots-casino-logo.png",
+      "rating": 4.4,
+      "badges": [
+        {"title": "20 Free Spins", "code": "SLOTS20"},
+        {"title": "300% First deposit bonus", "code": "DEPOSIT300"}
+      ],
+      "link": "#",
+      "isNew": false,
+      "country": "USA",
+      "minDeposit": 15,
+      "maxCashOut": 200,
+      "gamesAllowed": ["Scratch Cards", "Bingo"]
+    },
+    {
+      "name": "Sports Interaction Casino Review",
+      "logo": "sports-interaction-logo.png",
+      "rating": 4.4,
+      "badges": [
+        {"title": "$25 No Deposit Bonus", "code": "SPORTS25"},
+        {"title": "200% First deposit bonus", "code": "DEPOSIT200"}
+      ],
+      "link": "#",
+      "isNew": false,
+      "country": "USA",
+      "minDeposit": 50,
+      "maxCashOut": 400,
+      "gamesAllowed": ["Keno", "Scratch Cards"]
+    },
+    {
+      "name": "VIP Stakes Casino Review",
+      "logo": "vip-stakes-casino-logo.png",
+      "rating": 4.4,
+      "badges": [
+        {"title": "20 Free Spins", "code": "VIP20"},
+        {"title": "200% First deposit bonus +250 FS", "code": "VIP250"}
+      ],
+      "link": "#",
+      "isNew": false,
+      "country": "USA",
+      "minDeposit": 25,
+      "maxCashOut": 300,
+      "gamesAllowed": ["Bingo", "Slots"]
+    },
+    {
+      "name": "Jackpot Capital Casino Review",
+      "logo": "jackpot-capital-casino-logo.png",
+      "rating": 4.4,
+      "badges": [
+        {"title": "20 Free Spins", "code": "CAPITAL20"},
+        {"title": "400% First deposit bonus", "code": "CAPITAL400"}
+      ],
+      "link": "#",
+      "isNew": false,
+      "country": "USA",
+      "minDeposit": 10,
+      "maxCashOut": 250,
+      "gamesAllowed": ["Keno", "Scratch Cards", "Bingo"]
+    }
+  ]
